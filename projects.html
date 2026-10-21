@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Nijat Abbasov</title>
+  <meta name="description" content="Nijat Abbasov, KAIST undergraduate in Electrical Engineering and Mathematics, working on state estimation for robots and drones.">
+  <meta property="og:title" content="Projects | Nijat Abbasov">
+  <meta property="og:description" content="Nijat Abbasov, KAIST undergraduate in Electrical Engineering and Mathematics, working on state estimation for robots and drones.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+        <li><a href="olympiads.html">Olympiads</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+    </ul>
+    <ul>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h2>Projects</h2>
+
+  <div class="entry">
+    <h3>GNSS-Denied UAV Geo-Localization with VIO Fusion</h3>
+    <p class="meta"><a href="https://github.com/NijatAbbasov06/uav-geolocalization">[Code on GitHub]</a> <span>Aug 2026</span></p>
+    <ul>
+      <li>Built a CPU-only system that bounds visual-inertial odometry (VIO) drift with absolute fixes from satellite imagery, fusing OpenVINS (MSCKF) with self-supervised cross-view geo-localization (CAEVL).</li>
+      <li>Rejected outliers with chi-square gating against the VIO prior and consensus checks, raising fix precision from 17.7% to 99%.</li>
+      <li>Reduced position RMSE by 36% in real time (13.3 Hz on CPU) on 3.6 km of real flight data, and by 71% over the cruise segment offline.</li>
+    </ul>
+    <p class="tools">OpenVINS, ROS 2, Kalibr, PyTorch, Python</p>
+  </div>
+
+  <div class="entry">
+    <h3>Multi-Disciplinary Robotics: Autonomous Drone Navigation</h3>
+    <p class="meta"><a href="https://github.com/NijatAbbasov06/EE478">[Code on GitHub]</a> <span>Mar 2025 &ndash; Jun 2025</span></p>
+    <ul>
+      <li>Created a Gazebo simulation environment for autonomous navigation of a quadcopter.</li>
+      <li>Used the HKUST Aerial Robotics Fast-Planner for quadcopter path searching.</li>
+      <li>Implemented quadcopter localization with ORB-SLAM3 and AprilTags in simulation, and tested AprilTag detection in real-world experiments.</li>
+    </ul>
+    <p class="tools">ROS, Gazebo, PX4</p>
+  </div>
+
+  <div class="entry">
+    <h3>EE405 Robotics Team Project, KAIST</h3>
+    <p class="meta">Two-person team <span>Fall 2026, in progress</span></p>
+    <ul>
+      <li>Building a pipeline that runs SLAM to get a consistent map, localizes the robot on that map, and then grasps objects with a recent grasping approach.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Date of latest update: Oct 22, 2026.</p>
+  </footer>
+</body>
+</html>
