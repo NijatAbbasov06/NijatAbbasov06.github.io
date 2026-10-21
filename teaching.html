@@ -8,6 +8,23 @@
   <meta property="og:title" content="Teaching | Nijat Abbasov">
   <meta property="og:description" content="Nijat Abbasov, KAIST undergraduate in Electrical Engineering and Mathematics, working on state estimation for robots and drones.">
   <link rel="stylesheet" href="style.css">
+  <style>
+button.copy {
+  font: inherit;
+  font-size: .8em;
+  font-weight: bold;
+  color: #1d5c63;
+  background: #e8f1f1;
+  border: 1px solid #b9d3d5;
+  border-radius: 5px;
+  padding: 1px 9px;
+  margin-left: 4px;
+  cursor: pointer;
+  vertical-align: 1px;
+}
+button.copy:hover { background: #d6e8e9; }
+button.copy:focus-visible { outline: 2px solid #2a7f86; outline-offset: 2px; }
+  </style>
 </head>
 <body>
   <nav>
@@ -28,10 +45,25 @@
   <ul>
     <li><b>Physics olympiad coaching</b>: I coach younger students for physics olympiads and write preparation materials for them.</li>
   </ul>
-  <p>Students can reach me by <a href="mailto:na.abbasov06@gmail.com">email</a>.</p>
+  <p>Students can reach me by email: <a href="mailto:na.abbasov06@gmail.com">na.abbasov06@gmail.com</a> <button class="copy" type="button" data-email="na.abbasov06@gmail.com">Copy</button></p>
 
   <footer>
     <p>Date of latest update: Oct 22, 2026.</p>
   </footer>
+  <script>
+    document.querySelectorAll('button.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var email = btn.getAttribute('data-email');
+        function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1500); }
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).then(done, function () { fallback(); });
+        } else { fallback(); }
+        function fallback() {
+          var t = document.createElement('textarea'); t.value = email; document.body.appendChild(t);
+          t.select(); try { document.execCommand('copy'); done(); } catch (e) {} document.body.removeChild(t);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
